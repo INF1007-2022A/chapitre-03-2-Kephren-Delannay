@@ -23,17 +23,21 @@ def average(values):
 
 def bills(value):
     # TODO: Calculez le nombre de billets de 20$, 10$ et 5$ et pièces de 1$ à remettre pour représenter la valeur.
+    _bills = [0, 0, 0, 0, 0]
     while value != 0:
         if value >= 20:
-            pass
+            _bills[0] += 1
+            value -= 20
         elif value >= 10:
-            pass
+            _bills[1] += 1
+            value -= 10
         elif value >= 5:
-            pass
+            _bills[2] += 1
+            value -= 5
         elif value >= 1:
-            pass
-
-    return 0#(twenties, tens, fives, twos, ones);
+            _bills[3] += 1
+            value -= 1
+    return _bills[0], _bills[1], _bills[2], _bills[3]
 
 
 def format_base(value, base, digit_letters):
