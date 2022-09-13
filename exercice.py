@@ -47,7 +47,7 @@ def format_base(value, base, digit_letters):
     abs_value = abs(value)
     while abs_value != 0:
         digit = abs_value % base
-        result += digit_letters[digit]
+        result = digit_letters[digit] + result
         abs_value //= base
     if value < 0:
         # TODO: Ne pas oublier d'ajouter '-' devant pour les nombres négatifs.
